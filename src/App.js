@@ -21,6 +21,7 @@ class App extends Component {
   }
 
   handleChange = (event, keyName) => {
+    console.log(keyName)
     this.setState({ [keyName]: event.target.value })
   }
 
@@ -31,7 +32,7 @@ class App extends Component {
           name='name1' handleChange={(e, n) => this.handleChange(e, n)} value={this.state.name1}></UserInput>
         <UserOutput name={this.state.name1}></UserOutput>
         <UserInput
-          name='name2' handleChange={(e, n) => this.handleChange(e, n)} value={this.state.name2}></UserInput>
+          name='name2' handleChange={this.handleChange.bind(this)} value={this.state.name2}></UserInput>
         <UserOutput name={this.state.name2}></UserOutput>
       </div>
 
