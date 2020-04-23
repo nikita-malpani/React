@@ -2,7 +2,7 @@ import React from "react"
 
 const UserOutput = (props) => {
     return (
-        <div>
+        <div className="outputContainer">
             <p>Welcome to Output handler</p>
             <p> Your name: {props.name} </p>
         </div>
