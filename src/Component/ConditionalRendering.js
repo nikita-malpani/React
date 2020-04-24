@@ -31,7 +31,7 @@ class ConditionalRendering extends Component {
 
 
   render() {
-    const displayChar = this.state.text.split("").map((e, i) => <span onClick={() => this.deleteChar(i)} style={this.styles.char}>{e}</span>)
+    const displayChar = this.state.text.split("").map((e, i) => <span key={i} onClick={() => this.deleteChar(i)} style={this.styles.char}>{e}</span>)
 
     return (
       <div style={this.styles.ConditionalRendering}>
