@@ -3,7 +3,7 @@ import "./App.css";
 import SayHello from './Component/HelloWorld';
 import UserOutput from './Component/UserOutput';
 import UserInput from './Component/UserInput';
-
+import ConditionalRendering from './Component/ConditionalRendering'
 
 class App extends Component {
 
@@ -28,6 +28,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <ConditionalRendering></ConditionalRendering>
         <UserInput
           name='name1' handleChange={(e, n) => this.handleChange(e, n)} value={this.state.name1}></UserInput>
         <UserOutput name={this.state.name1}></UserOutput>
